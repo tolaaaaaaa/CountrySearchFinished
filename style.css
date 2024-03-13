@@ -1,0 +1,116 @@
+#countriesContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-weight: bolder;
+  font-size: 2rem;
+}
+
+label {
+  font-weight: bolder;
+  font-size: 1.4rem;
+  margin: 10px 0;
+}
+
+.inputBtnSec {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  gap: 20px;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+input {
+  padding: 0 10px;  
+  min-width: auto;
+  width: 300px;
+  height: 35px;
+  border: none;
+  border-radius: 5px;
+  background-image: linear-gradient(
+    to right,
+    red,
+    orange,
+    yellow,
+    green,
+    blue,
+    indigo,
+    violet,
+    red
+  );
+  background-size: 200% 100%;
+  background-position: 0% 50%;
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  animation: gradient-animation 20s linear infinite;
+  box-shadow: 10px 5px 0 0 rgba(0, 0, 0, 0.192);
+}
+#searchBtn{
+    width: auto;
+    height: auto;
+    background-color: transparent;
+    border-radius: 5px;
+    border-color: black;
+    box-shadow: 10px 5px 0 0 rgba(0, 0, 0, 0.192);
+}
+#searchBtn:hover{
+    cursor: pointer;
+}
+input::placeholder{
+    color:black;
+    font-weight: bolder;
+}
+input:active{
+    color:transparent;
+}
+
+.country {
+  flex: 0 1 calc(33.333%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  box-shadow: 0 10px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  background: white;
+}
+
+.country img {
+  width: 300px;
+  height: 200px;
+  object-fit: fill;
+  margin-bottom: 10px;
+}
+
+.country .name {
+  font-size: 1.2em;
+  /* Increases the font size of the country name */
+  margin: 10px 0;
+}
+
+.country .officialName {
+  font-size: 0.9em;
+  color: #555;
+  /* Gives the official name a lighter color for visual hierarchy */
+}
